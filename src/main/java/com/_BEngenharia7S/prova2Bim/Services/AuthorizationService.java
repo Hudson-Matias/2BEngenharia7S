@@ -1,5 +1,6 @@
 package com._BEngenharia7S.prova2Bim.Services;
 
+import com._BEngenharia7S.prova2Bim.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

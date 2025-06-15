@@ -1,5 +1,9 @@
 package com._BEngenharia7S.prova2Bim.Controllers;
 
+import com._BEngenharia7S.prova2Bim.Domain.Product.Product;
+import com._BEngenharia7S.prova2Bim.Domain.Product.ProductRequestDTO;
+import com._BEngenharia7S.prova2Bim.Domain.Product.ProductResponseDTO;
+import com._BEngenharia7S.prova2Bim.Repositories.ProductRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

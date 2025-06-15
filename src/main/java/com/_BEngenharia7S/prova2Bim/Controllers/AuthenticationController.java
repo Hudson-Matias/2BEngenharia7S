@@ -1,5 +1,11 @@
 package com._BEngenharia7S.prova2Bim.Controllers;
 
+import com._BEngenharia7S.prova2Bim.Domain.User.AuthenticationDTO;
+import com._BEngenharia7S.prova2Bim.Domain.User.LoginResponseDTO;
+import com._BEngenharia7S.prova2Bim.Domain.User.RegisterDTO;
+import com._BEngenharia7S.prova2Bim.Domain.User.User;
+import com._BEngenharia7S.prova2Bim.Infra.Security.TokenService;
+import com._BEngenharia7S.prova2Bim.Repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

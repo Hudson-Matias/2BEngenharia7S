@@ -1,5 +1,6 @@
 package com._BEngenharia7S.prova2Bim.Infra.Security;
 
+import com._BEngenharia7S.prova2Bim.Repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

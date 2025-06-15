@@ -1,5 +1,6 @@
 package com._BEngenharia7S.prova2Bim.Infra.Security;
 
+import com._BEngenharia7S.prova2Bim.Domain.User.User;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
