@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController()
 @RequestMapping("product")
@@ -31,4 +32,31 @@ public class ProductController {
 
         return ResponseEntity.ok(productList);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ProductResponseDTO> updateProduct(@PathVariable String id, @RequestBody ProductRequestDTO data) {
+        Optional<Product> optionalProduct = repository.findById(id);
+
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            product.setName(data.name());
+            product.setPrice(data.price());
+            repository.save(product);
+
+            return ResponseEntity.ok(new ProductResponseDTO(product));
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProduct(@PathVariable String id) {
+        if (repository.existsById(id)) {
+            repository.deleteById(id);
+            return ResponseEntity.noContent().build(); // 204
+        } else {
+            return ResponseEntity.notFound().build();  // 404
+        }
+    }
+
 }

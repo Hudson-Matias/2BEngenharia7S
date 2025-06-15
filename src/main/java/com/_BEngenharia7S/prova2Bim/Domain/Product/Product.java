@@ -1,10 +1,8 @@
 package com._BEngenharia7S.prova2Bim.Domain.Product;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
 @Table(name = "product")
 @Entity(name = "product")
@@ -17,8 +15,10 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    @Setter
     private String name;
 
+    @Setter
     private Integer price;
 
     public Product(ProductRequestDTO data){
